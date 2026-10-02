@@ -1,0 +1,2 @@
+pd.set_option('display.max_rows', None) - #to display all rows while doing 'df'
+pd.reset_option('display.max_rows')
