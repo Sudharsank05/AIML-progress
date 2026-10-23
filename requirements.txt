@@ -1,0 +1,12 @@
+catboost
+gradio
+imbalanced-learn
+ipykernel
+matplotlib
+numpy
+pandas
+scikit-learn
+scipy
+seaborn
+statsmodels
+xgboost
