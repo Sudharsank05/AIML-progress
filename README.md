@@ -33,12 +33,16 @@ A hands-on learning repository documenting my journey through Python for data sc
 
 | Dataset | File |
 |---------|------|
-| Titanic passengers | `titanic.csv` |
-| Medical insurance costs | `insurance.csv` |
-| Loan approval | `loan_approval.csv` |
-| Heart attack prediction | `heart_attack_prediction_dataset.csv` |
-| Hotel bookings (2024 update) | `hotel_bookings_updated_2024.csv` |
-| World University Rankings 2023 | `World University Rankings 2023-selected-columns.csv` |
+| Airline satisfaction | `datasets/Airline-Satisfaction-Data.csv` |
+| Bank marketing | `datasets/bank.csv` |
+| Heart attack prediction | `datasets/heart_attack_prediction_dataset.csv` |
+| Hotel bookings (2024 update) | `datasets/hotel_bookings_updated_2024.csv` |
+| Loan approval | `datasets/loan_approval.csv` |
+| Mall customers | `datasets/Mall_Customers.csv` |
+| Medical dataset | `datasets/Medicaldataset.csv` |
+| Medical insurance costs | `datasets/insurance.csv` |
+| Titanic passengers | `datasets/titanic.csv` |
+| World University Rankings 2023 | `datasets/World University Rankings 2023-selected-columns.csv` |
 
 ---
 
@@ -56,7 +60,7 @@ A hands-on learning repository documenting my journey through Python for data sc
 AIML-progress/
 ├── materials/                 # Reference and study materials
 ├── *.ipynb                    # Topic-wise notebooks (see table above)
-├── *.csv                      # Datasets used in the notebooks
+├── datasets/                  # CSV datasets used in the notebooks
 └── useful_cmds.txt            # Handy commands and notes
 ```
 
@@ -76,7 +80,7 @@ pip install numpy pandas matplotlib seaborn scikit-learn jupyter
 jupyter notebook
 ```
 
-Open any notebook and run the cells top to bottom. Datasets sit in the repo root, so no extra downloads are needed.
+Open any notebook and run the cells top to bottom. Local datasets are stored in `datasets/`; some reference notebooks may use external or Colab-only datasets.
 
 ---
 
