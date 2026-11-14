@@ -2,6 +2,7 @@ catboost
 gradio
 imbalanced-learn
 ipykernel
+joblib
 matplotlib
 numpy
 pandas
