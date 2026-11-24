@@ -1,137 +1,138 @@
-# AI/ML Progress
+# AIML Progress: From Data Analysis to Deep Learning
 
-A hands-on learning repository documenting my journey through Python for data science, exploratory data analysis (EDA), preprocessing, statistics, and machine learning. Every topic is worked out in Jupyter notebooks on real-world datasets, and the repo keeps growing as I move into deep learning, NLP, and generative AI.
+End-to-end AI/ML work built through the AI/ML program at Xplore IT Corp (XIC). The repo covers the full pipeline: statistics, EDA and preprocessing, supervised and unsupervised learning, and now deep learning (ANN and CNN) on real-world datasets. Every notebook is hands-on and reproducible.
 
-> **Status:** Actively updated. Currently covering Python, EDA, preprocessing, statistics, and core ML (regression and classification).
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-ff6f00)
+![Status](https://img.shields.io/badge/Status-Actively%20updated-brightgreen)
+
+> **Open to entry-level roles** in full-stack development (React, Next.js, Node.js) and AI/ML. I build the interface and the intelligence behind it. [Portfolio](https://sudharsank.vercel.app/) | [GitHub](https://github.com/Sudharsank05) | sudharsanpoy@gmail.com
 
 ---
 
 ## What this repo demonstrates
 
-- **Data analysis:** cleaning, exploring, and summarising real datasets with Python
-- **Preprocessing:** handling missing values, duplicates, encoding categorical data, and feature scaling
-- **Statistics:** sampling, z-scores, chi-square tests, and ANOVA
-- **Machine learning:** regression and classification models built and evaluated in notebooks
-- **Consistent practice:** regular, incremental commits and practice notebooks
+| Skill | Evidence in this repo |
+|---|---|
+| Data cleaning and EDA | Null handling (mean/median/mode), duplicate checks, outlier treatment, encoding, visual analysis on real Kaggle datasets |
+| Statistics | Sampling methods, z-score, chi-square and ANOVA hypothesis tests |
+| Feature engineering | Label and ordinal encoding, feature scaling, PCA for dimensionality reduction |
+| Supervised learning | Regression and classification models with evaluation metrics |
+| Unsupervised learning | Clustering, PCA, and a Spotify song suggester built on track features |
+| Deep learning | ANN for binary and multinomial classification, CNNs for image classification (facial expressions, melanoma) |
+| Engineering practice | Clean Git history, reproducible environments, large data kept out of version control |
 
 ---
 
-## Topics covered
+## Highlighted work
 
-| Area | Notebooks |
-|------|-----------|
-| **Python fundamentals** | `supervised-learning/python.ipynb`, `supervised-learning/main.ipynb` |
-| **Data preprocessing** | `supervised-learning/preprocessing.ipynb`, `supervised-learning/feature-scaling.ipynb` |
-| **Statistics** | `supervised-learning/sampling.ipynb`, `supervised-learning/z-score.ipynb`, `supervised-learning/plots-chi-anova.ipynb` |
-| **Machine learning: regression** | `supervised-learning/ML-reg.ipynb`, `supervised-learning/New_ML_Reg.ipynb` |
-| **Machine learning: classification** | `supervised-learning/ML-classification.ipynb`, `supervised-learning/New_ML.ipynb` |
-| **Practice and assignments** | `supervised-learning/preAssignment1.ipynb`, `supervised-learning/friday-practice.ipynb`, `supervised-learning/friday-task.ipynb`, `supervised-learning/pratice.ipynb` |
-| **Unsupervised learning** | `spotify-song-suggester.ipynb`, `unsupervised-learning/` |
+### Spotify Song Suggester (unsupervised learning)
+Recommends similar tracks from audio features using clustering and similarity on a ~19 MB Spotify track dataset, with a saved catalog artifact for fast lookups.
+**Stack:** pandas, scikit-learn, PCA
 
-### Spotify mood-based song recommender
+### Image classification with CNNs (deep learning)
+Convolutional networks trained on two image datasets: **facial expression recognition** and **melanoma (skin lesion) classification**.
+**Stack:** TensorFlow/Keras, NumPy, Matplotlib
+**Result:** `[add best accuracy / F1 here]`
 
-The Spotify workflow compares KMeans, MiniBatchKMeans, Agglomerative Clustering,
-Gaussian Mixture, and DBSCAN on a reproducible sample, then trains a KMeans
-pipeline on unique tracks. Recommendations are chosen by a descriptive cluster
-name (for example, `Chill Acoustic`), rather than by entering a song title.
+### ANN classification and multinomial tasks (deep learning)
+Feed-forward networks for binary and multi-class prediction, covering activation functions, loss selection, and training diagnostics.
+**Stack:** TensorFlow/Keras, scikit-learn
 
-Run these commands from the repository root:
+### EDA and preprocessing on real data
+Assignments on hotel bookings, Amazon sales, airline satisfaction, insurance, loan approval and heart attack prediction data: cleaning, encoding, scaling, then modeling.
+**Stack:** pandas, NumPy, Seaborn, scikit-learn
 
-```bash
-python unsupervised-learning/spotify_mood_recommender.py evaluate
-python unsupervised-learning/spotify_mood_recommender.py train
-python unsupervised-learning/spotify_mood_recommender.py clusters
-python unsupervised-learning/spotify_mood_recommender.py suggest "Chill Acoustic" --limit 10
+---
+
+## Learning roadmap
+
+| Stage | Topics | Status |
+|---|---|---|
+| Python and statistics | Python, sampling, z-score, chi-square, ANOVA | Done |
+| EDA and preprocessing | Null handling, duplicates, encoding, scaling | Done |
+| Machine learning | Regression, classification, evaluation | Done |
+| Unsupervised learning | Clustering, PCA, song suggester project | Done |
+| Deep learning | ANN, CNN | In progress |
+| NLP and GenAI | Text processing, transformers, GenAI | Upcoming |
+| MLOps | Packaging and deploying models | Upcoming |
+
+---
+
+## Repo layout
+
 ```
-
-Training saves a scikit-learn pipeline as `spotify_mood_model.joblib` and the
-clustered track catalog as `spotify_track_catalog.pkl` under
-`unsupervised-learning/artifacts/`. It also saves algorithm and cluster-count
-comparison CSVs there. Pickle/joblib files can execute code when loaded; only
-load artifacts generated by this project or another trusted source.
+AIML-progress/
+├── *.ipynb                  # Python, statistics, EDA, ML and DL notebooks
+├── unsupervised-learning/   # Clustering, PCA, Spotify song suggester
+├── materials/               # Course materials
+├── datasets/                # Local data (git-ignored, see Datasets)
+└── useful_cmds.txt          # Handy commands
+```
 
 ---
 
 ## Datasets
 
-| Dataset | File |
-|---------|------|
-| Airline satisfaction | `datasets/Airline-Satisfaction-Data.csv` |
-| Bank marketing | `datasets/bank.csv` |
-| Heart attack prediction | `datasets/heart_attack_prediction_dataset.csv` |
-| Hotel bookings (2024 update) | `datasets/hotel_bookings_updated_2024.csv` |
-| Loan approval | `datasets/loan_approval.csv` |
-| Mall customers | `datasets/Mall_Customers.csv` |
-| Medical dataset | `datasets/Medicaldataset.csv` |
-| Medical insurance costs | `datasets/insurance.csv` |
-| Titanic passengers | `datasets/titanic.csv` |
-| World University Rankings 2023 | `datasets/World University Rankings 2023-selected-columns.csv` |
+Large datasets are intentionally **not committed**. This keeps the repo fast to clone and follows standard ML practice. Small CSVs are tracked, and larger files (including the CNN image archives) go in a git-ignored `datasets/` folder.
+
+| Dataset | Used for | Source |
+|---|---|---|
+| Hotel bookings | EDA and preprocessing | `[[Kaggle link](https://www.kaggle.com/datasets/kundanbedmutha/hotel-booking-reservation)]` |
+| Amazon Sale Report | EDA and ML practice | `[/datasets]` |
+| Airline Satisfaction | Classification | `[[Kaggle link](https://www.kaggle.com/datasets/arseniyshutko/binary-aviation-satisfaction-129k)]` |
+| Heart attack prediction, loan approval, insurance, Titanic | ML classification and regression | `[/datasets]` |
+| Spotify track dataset | Unsupervised learning | `[[Kaggle link](https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset)]` |
+| Facial expressions | CNN | `[[Kaggle link](https://www.kaggle.com/datasets/msambare/fer2013)]` |
+| Melanoma | CNN | `[[Kaggle link](https://www.kaggle.com/datasets/hasnainjaved/melanoma-skin-cancer-dataset-of-10000-images)]` |
+
+**Download a dataset:**
+
+```bash
+pip install kaggle
+kaggle datasets download -d <owner>/<dataset-name> -p datasets --unzip
+```
+
+or inside a notebook:
+
+```python
+import kagglehub
+path = kagglehub.dataset_download("<owner>/<dataset-name>")
+```
+
+---
+
+## Run it locally
+
+```bash
+git clone https://github.com/Sudharsank05/AIML-progress.git
+cd AIML-progress
+
+python -m venv .venv
+source .venv/bin/activate
+
+pip install numpy pandas matplotlib seaborn scikit-learn scipy jupyter tensorflow
+jupyter notebook
+```
+
+Download the datasets a notebook needs first (see above).
 
 ---
 
 ## Tech stack
 
-- **Language:** Python
-- **Environment:** Jupyter Notebook
-- **Libraries:** NumPy, Pandas, Matplotlib, Seaborn, scikit-learn
-
----
-
-## Repository structure
-
-```
-AIML-progress/
-├── supervised-learning/       # Supervised notebooks and algorithm notes
-│   └── artifacts/             # Saved supervised models and training logs
-├── unsupervised-learning/     # Unsupervised notebooks
-│   └── artifacts/             # Saved unsupervised models and analysis outputs
-├── spotify-song-suggester*.ipynb # Recent Spotify notebooks kept at the root
-├── materials/                 # Reference and study materials
-├── datasets/                  # Shared CSV datasets used in the notebooks
-└── useful_cmds.txt            # Handy commands and notes
-```
-
----
-
-## Getting started
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/Sudharsank05/AIML-progress.git
-cd AIML-progress
-
-# 2. Install dependencies
-pip install numpy pandas matplotlib seaborn scikit-learn jupyter
-
-# 3. Launch Jupyter
-jupyter notebook
-```
-
-Start Jupyter from the repository root, then open a notebook and run the cells top to bottom. Dataset and artifact paths are relative to the repository root. Local datasets are stored in `datasets/`; some reference notebooks may use external or Colab-only datasets.
-
----
-
-## Roadmap
-
-- [x] Python fundamentals
-- [x] EDA and data preprocessing
-- [x] Statistics (sampling, z-score, chi-square, ANOVA)
-- [x] Feature scaling
-- [x] Machine learning: regression and classification
-- [ ] Model evaluation and tuning
-- [ ] Deep learning
-- [ ] Natural language processing (NLP)
-- [ ] Generative AI and transformers
-- [ ] MLOps basics
+**Languages and tools:** Python, Jupyter, Git/GitHub
+**Data and ML:** NumPy, pandas, SciPy, scikit-learn
+**Deep learning:** TensorFlow, Keras
+**Visualization:** Matplotlib, Seaborn
 
 ---
 
 ## About me
 
-I'm **Sudharsan**, a Computer Science graduate and a frontend-focused full-stack developer (React, Next.js, Node.js), now building a foundation in AI/ML alongside my web development work.
+I'm **Sudharsan**, a B.E. Computer Science and Engineering graduate (P. A. College of Engineering and Technology, Pollachi; CGPA 8.3) and a frontend-focused full-stack developer. I work with React, Next.js and Node.js, and I'm adding machine learning and deep learning so I can ship products that are both well built and intelligent.
 
 - Portfolio: [sudharsank.vercel.app](https://sudharsank.vercel.app/)
-- GitHub: [@Sudharsank05](https://github.com/Sudharsank05)
+- GitHub: [Sudharsank05](https://github.com/Sudharsank05)
 - Email: sudharsanpoy@gmail.com
-
-Feedback and suggestions are always welcome. Feel free to open an issue.
